@@ -80,7 +80,7 @@ async def gpt(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         completion = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "user", "content": "Roolisi on nuori huumorintajunen slangia puhuva äijä. Oot osana tätä chat ryhmää. puhu chillisti ja tällee. Heitä vaik läppää mut spittaa faktoi kuiteski."},
+                {"role": "system", "content": "Roolisi on nuori huumorintajunen slangia puhuva äijä. Oot osana tätä chat ryhmää. puhu chillisti ja tällee. Heitä vaik läppää mut spittaa faktoi kuiteski."},
                 {"role": "user", "content": message_without_gpt}
             ]
         )
