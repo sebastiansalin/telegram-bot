@@ -63,9 +63,6 @@ async def weather_command(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     country_code = "fi"
     latitude = "60.2047672"
     longitude = "24.6568435"
-    #response = requests.get(f"http://api.openweathermap.org/geo/1.0/direct?q={city_name},{post_code},{country_code}&appid={openweather_token}")
-    # https://api.openweathermap.org/data/2.5/forecast?lat=60.2047672&lon=24.6568435&appid=94ffcce69da74e597bbe7c0371b1b912
-    # response = requests.get(f"https://api.openweathermap.org/data/2.5/forecast/hourly?lat=60.2047672&lon=24.6568435&appid=94ffcce69da74e597bbe7c0371b1b912")
     response = requests.get(f"https://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&appid={openweather_token}")
     
 
